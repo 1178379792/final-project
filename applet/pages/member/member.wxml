@@ -1,0 +1,25 @@
+<view class="my-bar">
+    <view class="my-box">
+        <view class="head-bar">
+            <button bindgetuserinfo="goLogin" class="userinfo-avatar" style="background-image: url({{touxiang}})" size="default"></button>
+            <navigator class="title" url="/pages/yonghu/updt?id={{ user.id }}"> 
+                    <view class="name-box"> {{ user.xingming }} </view>
+             </navigator>  
+
+        </view>
+    </view>
+</view>
+
+<van-cell-group title="购物车管理">
+    <van-cell icon="" title="我的购物车" value="" label="" size="" border="1" center="" clickable="" arrow-direction="" url="/pages/gouwuche/list_goumairen" is-link></van-cell>
+</van-cell-group>
+
+<van-cell-group title="图书订单管理">
+    <van-cell icon="" title="我的图书订单" value="" label="" size="" border="1" center="" clickable="" arrow-direction="" url="/pages/dingdan/list_xiadanren" is-link></van-cell>
+</van-cell-group>
+
+<van-cell-group title="" border inset>
+    <van-cell icon="user-o" title="退出登录" value="" label="" size="large" border="1" center="" clickable="" arrow-direction="" bindtap="tuichudenglu" is-link></van-cell>
+</van-cell-group>
+
+<v-footer />

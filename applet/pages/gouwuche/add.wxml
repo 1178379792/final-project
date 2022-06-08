@@ -1,0 +1,30 @@
+<van-cell-group>
+    <van-cell title="编号">
+        <view> {{ form.bianhao }} </view>
+    </van-cell>
+
+    <van-cell title="名称">
+        <view> {{ form.mingcheng }} </view>
+    </van-cell>
+
+    <van-cell title="图片">
+        <view> <e-img src="{{ form.tupian }}" max-width="120" /> </view>
+    </van-cell>
+
+    <van-cell title="分类">
+        <view> <e-select-view module="tushufenlei" value="{{ form.fenlei }}" select="id" show="fenlei"></e-select-view> </view>
+    </van-cell>
+
+    <van-cell title="库存">
+        <view> {{ form.kucun }} </view>
+    </van-cell>
+
+    <van-cell title="价格">
+        <view> {{ form.jiage }} </view>
+    </van-cell>
+
+    <van-field type="number" label="购买数量" placeholder="输入购买数量" value="{{ form.goumaishuliang }}" bindinput="onInput" data-name="form.goumaishuliang" />
+</van-cell-group>
+
+<van-button type="primary" bindclick="submit" block loading="{{ loading }}" loading-text="发布中">保存</van-button>
+<v-footer />

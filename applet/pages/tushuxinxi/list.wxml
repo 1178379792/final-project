@@ -1,0 +1,31 @@
+<swiper indicator-dots="{{ true }}" autoplay="{{ true }}" interval="{{ 5000 }}">
+    <swiper-item wx:for="{{ bhtList }}">
+        <e-img src="{{ item.image }}" pb="50"></e-img>
+    </swiper-item>
+</swiper>
+
+<van-nav-bar title="书城" safe-area-inset-top="{{ false }}"> </van-nav-bar>
+
+<van-dropdown-menu>
+    <van-dropdown-item value="{{ search.fenlei }}" bind:change="onSelectSearch" data-name="search.fenlei" options="{{ fenleiList }}" />
+</van-dropdown-menu>
+
+<van-search value="{{ tushuxinxiKeyword }}" placeholder="关键字..." bind:change="onInput" data-name="tushuxinxiKeyword" bind:search="onSearchtushuxinxi"> </van-search>
+
+<view style="padding: 0 20rpx">
+    <van-row gutter="20">
+        <van-col wx:for="{{ lists }}" wx:for-item="v" span="12">
+            <navigator url="/pages/tushuxinxi/detail?id={{ v.id }}">
+                <view class="photo-list">
+                    <view class="images">
+                        <e-img src="{{ v.tupian }}" />
+                    </view>
+                    <view class="title"> {{ v.mingcheng }} </view>
+                    <view class="description"> {{ v.mingcheng }} </view>
+                </view>
+            </navigator>
+        </van-col>
+    </van-row>
+</view>
+
+<v-footer />

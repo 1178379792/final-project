@@ -1,0 +1,13 @@
+.photo-list {
+  margin-bottom: 43rpx;
+}
+.photo-list .title {
+  padding: 30rpx 16rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #747474;
+}
+.photo-list .description {
+  font-size: 24rpx;
+  color: #9c9c9c;
+}

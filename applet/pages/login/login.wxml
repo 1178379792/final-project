@@ -1,0 +1,19 @@
+<view class="container1">
+    <view style="display: flex; justify-content: center; margin-top: 200rpx; margin-bottom: 100rpx">
+        <image src="/static/logo.png" mode="widthFix" style="width: 28%; border-radius: 10rpx; height: 116px"></image>
+    </view>
+    <van-cell-group border>
+        <van-field border label="账号" value="{{ form.username }}" bindchange="onInput" data-name="form.username" placeholder="请输入用户名" />
+        <van-field border label="密码" type="password" value="{{ form.password }}" bindchange="onInput" data-name="form.password" placeholder="请输入密码" />
+       
+    </van-cell-group>
+    <view style="padding: 15rpx">
+        <van-button bindclick="login" block type="primary">登录</van-button>
+        
+    </view>
+    <view style="padding: 15rpx">
+        <van-button bindclick="goUrl" data-url="/pages/yonghu/add" block type="info">注册</van-button>
+    </view> 
+</view>
+
+

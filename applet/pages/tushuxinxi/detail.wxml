@@ -1,0 +1,43 @@
+<e-img src="{{ map.tupian }}" pb="100"></e-img>
+
+<view>
+    <van-cell-group>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 编号 </view>
+            <view style="color: #999999"> {{ map.bianhao }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 名称 </view>
+            <view style="color: #999999"> {{ map.mingcheng }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 分类 </view>
+            <view style="color: #999999"> <e-select-view module="tushufenlei" value="{{ map.fenlei }}" select="id" show="fenlei"></e-select-view> </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 作者 </view>
+            <view style="color: #999999"> {{ map.zuozhe }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 出版社 </view>
+            <view style="color: #999999"> {{ map.chubanshe }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 库存 </view>
+            <view style="color: #999999"> {{ map.kucun }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 价格 </view>
+            <view style="color: #999999"> {{ map.jiage }} </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+
+<view style="padding-bottom: 20rpx">
+    <view style="padding: 30rpx; line-height: 26px"> <rich-text nodes="{{ map.miaoshu }}"></rich-text> </view>
+</view>
+
+<van-goods-action safe-area-inset-bottom="{{ false }}">
+    <van-goods-action-icon icon="cart-o" url="/pages/gouwuche/list_goumairen" text="购物车" />
+    <van-goods-action-button url="/pages/gouwuche/add?id={{ map.id }}" type="warning" text="加入购物车" />
+</van-goods-action>

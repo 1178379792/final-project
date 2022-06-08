@@ -1,0 +1,31 @@
+<view>
+    <van-cell-group>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 订单编号 </view>
+            <view style="color: #999999"> {{ map.dingdanbianhao }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 订单金额 </view>
+            <view style="color: #999999"> {{ map.dingdanjine }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 订单状态 </view>
+            <view style="color: #999999"> {{ map.dingdanzhuangtai }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 姓名 </view>
+            <view style="color: #999999"> {{ map.xingming }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 联系电话 </view>
+            <view style="color: #999999"> {{ map.lianxidianhua }} </view>
+        </van-cell>
+        <van-cell icon="" arrow-direction="right">
+            <view slot="title" style="color: #000000"> 收货地址 </view>
+            <view style="color: #999999"> {{ map.shouhuodizhi }} </view>
+        </van-cell>
+    </van-cell-group>
+</view>
+
+<van-submit-bar price="{{ map.dingdanjine * 100 }}" button-text="立即支付" label="支付金额：" button-type="primary" bind:submit="onPaymentOrder" wx:if="{{ map.iszf == '否' }}">
+</van-submit-bar>

@@ -1,0 +1,30 @@
+<swiper indicator-dots="{{ true }}" autoplay="{{ true }}" interval="{{ 5000 }}">
+    <swiper-item wx:for="{{ bhtList }}">
+        <e-img src="{{ item.image }}" pb="50"></e-img>
+    </swiper-item>
+</swiper>
+
+<van-notice-bar mode="" text="欢迎使用“书痴”图书商城系统" scrollable="" color="#f60" background="#fff7cc" left-icon="volume-o"> </van-notice-bar>
+
+<van-search value="{{ tushuxinxiKeyword }}" placeholder="关键字..." input-align="center" bind:change="onInput" data-name="tushuxinxiKeyword" bind:search="onSearchtushuxinxi">
+</van-search>
+
+<van-nav-bar title="图书信息" safe-area-inset-top="{{ false }}"> </van-nav-bar>
+
+<view style="padding: 0 20rpx">
+    <van-row gutter="20">
+        <van-col wx:for="{{ tushuxinxilist1 }}" wx:for-item="v" span="12">
+            <navigator url="/pages/tushuxinxi/detail?id={{ v.id }}">
+                <view class="photo-list">
+                    <view class="images">
+                        <e-img src="{{ v.tupian }}" />
+                    </view>
+                    <view class="title"> {{ v.mingcheng }} </view>
+                    <view class="description"> {{ v.mingcheng }} </view>
+                </view>
+            </navigator>
+        </van-col>
+    </van-row>
+</view>
+
+<v-footer />

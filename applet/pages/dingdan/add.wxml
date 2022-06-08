@@ -1,0 +1,50 @@
+<view class="gouwushop-list" wx:for="{{ gouwuchelist }}" wx:for-item="v" wx:for-index="index">
+    <view class="gouwu-info">
+        <van-card price="{{ v.jiage }}" title="{{ v.mingcheng }}" thumb="{{ v.tupian[0] }}" num="x{{ v.goumaishuliang }}"> </van-card>
+    </view>
+</view>
+
+<van-cell-group>
+    <van-field
+        type="text"
+        error-message="{{ errors.dingdanbianhao }}"
+        label="订单编号"
+        placeholder="输入订单编号"
+        value="{{ form.dingdanbianhao }}"
+        bindinput="onInput"
+        data-name="form.dingdanbianhao"
+    />
+
+    <van-field
+        type="number"
+        error-message="{{ errors.dingdanjine }}"
+        label="订单金额"
+        placeholder="输入订单金额"
+        value="{{ form.dingdanjine }}"
+        bindinput="onInput"
+        data-name="form.dingdanjine"
+    />
+    <van-field type="text" error-message="{{ errors.xingming }}" label="姓名" placeholder="输入姓名" value="{{ form.xingming }}" bindinput="onInput" data-name="form.xingming" />
+    <van-field
+        type="text"
+        error-message="{{ errors.lianxidianhua }}"
+        label="联系电话"
+        placeholder="输入联系电话"
+        value="{{ form.lianxidianhua }}"
+        bindinput="onInput"
+        data-name="form.lianxidianhua"
+    />
+    <van-field
+        type="text"
+        error-message="{{ errors.shouhuodizhi }}"
+        label="收货地址"
+        placeholder="输入收货地址"
+        value="{{ form.shouhuodizhi }}"
+        bindinput="onInput"
+        data-name="form.shouhuodizhi"
+    />
+</van-cell-group>
+
+
+
+<van-submit-bar price="{{ shopPrice }}" button-text="生成订单" label="合计：" button-type="primary" bind:submit="onSubmitBar"> </van-submit-bar>
